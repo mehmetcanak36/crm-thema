@@ -52,7 +52,7 @@
       <!-- Site wrapper -->
       <div class="wrapper">
          <header class="main-header">
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                <!-- Logo -->
                <span class="logo-mini">
                <img src="assets/dist/img/kuvars-mini-logo.png" alt="">
@@ -72,10 +72,7 @@
                <a href="#search"><span class="pe-7s-search"></span></a>
                <div id="search">
                  <button type="button" class="close">×</button>
-                 <form>
-                   <input type="search" value="" placeholder="Search..">
-                   <button type="submit" class="btn btn-add">Search...</button>
-                </form>
+                 
              </div>
              <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
@@ -115,7 +112,7 @@
                <!-- sidebar menu -->
                <ul class="sidebar-menu">
                   <li class="active">
-                     <a href="index.html"><i class="fa fa-tachometer"></i><span>Dashboard</span>
+                     <a href="index.php"><i class="fa fa-tachometer"></i><span>Dashboard</span>
                      <span class="pull-right-container">
                      </span>
                      </a>
@@ -129,15 +126,15 @@
                      </a>
                      <ul class="treeview-menu">
                         <li><a href="add-customer.php">MÜŞTERİ EKLE</a></li>
-                        <li><a href="clist.html">LİSTELE</a></li>
-                        <li><a href="group.html">GRUPLANDIR</a></li>
+                        <li><a href="clist.php">LİSTELE</a></li>
+                       
                      </ul>
                   </li>
                   
    
                   
                   <li>
-                     <a href="company.html">
+                     <a href="company.php">
                      <i class="fa fa-home"></i> <span>Kurumlar</span>
                      <span class="pull-right-container">
                      </span>

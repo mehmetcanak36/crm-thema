@@ -34,17 +34,16 @@ function deletecustomer($id){
     $conn=connect();
     $query="DELETE FROM customer where id = $id";
     $data = mysqli_query($conn,$query);
-    header("Location: customer.php");
+    header("Location: clist.php");
     return $data; 
 }
-function updatecustomer($id,$customerName,$customerLastName,$dcustomerEmail,$costumerAddress,$customerManager,
-    $customerdepartment){
+function updatecustomer($id,$customerName,$customerLastName,$dcustomerEmail,$costumerAddress,$customerPhone){
     $conn=connect();
     $query="UPDATE customer SET cName='$customerName',cLastName='$customerLastName',
-    cEmail='$dcustomerEmail',cAddress='$costumerAddress',manager_id='$customerManager'
-    ,deopartment_id='$customerdepartment' WHERE id='$id'";
+    cEmail='$dcustomerEmail',cAddress='$costumerAddress',cPhone='$customerPhone'
+     WHERE id='$id'";
     $data=mysqli_query($conn,$query);
-    header("Location: department.php");
+    header("Location: clist.php");
 }
 
 function getData($id){

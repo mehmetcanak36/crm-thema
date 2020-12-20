@@ -1,3 +1,14 @@
+<?php include "functions_company.php"?>
+
+<?php 
+$d1=$_GET['did'];
+
+
+$data=getData($d1);
+
+
+?>
+
 <?php include "header.php" ?>
 
 <div class="content-wrapper">
@@ -7,8 +18,9 @@
                   <i class="fa fa-users"></i>
                </div>
                <div class="header-title">
-                  <h1>Müşteri Ekle</h1>
-                  <small>Müşteri Listesi</small>
+                  <h1>Kurum Güncelle</h1>
+                  <p></p>
+                  <small></small>
                </div>
             </section>
          <!-- /.content-wrapper -->
@@ -21,45 +33,47 @@
                      <div class="panel panel-bd lobidrag">
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonlist"> 
-                              <a class="btn btn-add " href="clist.php"> 
-                              <i class="fa fa-list"></i>  Müsteri listesi </a>  
+                              <a class="btn btn-add " href="company.php"> 
+                              <i class="fa fa-list"></i>  kurum listesi </a>  
                            </div>
                         </div>
+                        
                         <div class="panel-body">
-                           <form class="col-sm-6" action="addcustomer.php" method="post">
+                           
+                           <?php foreach($data as $d){ ?>
+                            <form class="col-sm-6" action="updatecompany.php?did=<?php echo $d['did'] ?>" method="post">
                               <div class="form-group">
                                  <label>Adı </label>
-                                 <input type="text" name="name" class="form-control" placeholder="adı girin" required>
+                                 <input value="<?php echo $d['dName']?>" type="text" name="name" class="form-control" placeholder="adı girin" required>
                               </div>
-                              <div class="form-group">
-                                 <label>Soyadı</label>
-                                 <input type="text" name="lastname"class="form-control" placeholder="soyadı girin" required>
-                              </div>
+                              
                               <div class="form-group">
                                  <label>Email</label>
-                                 <input type="email" name="email" class="form-control" placeholder="emaili girin" required>
+                                 <input  value="<?php echo $d['dEmail']?>" type="email" name="email" class="form-control" placeholder="emaili girin" required>
                               </div>
                               <div class="form-group">
                                  <label>Telefon</label>
-                                 <input type="number" name="phone"class="form-control" placeholder="telefonu girin" required>
+                                 <input value="<?php echo $d['dPhoneNumber']?>" type="number" name="phone"class="form-control" placeholder="telefonu girin" required>
                               </div>
                               <div class="form-group">
                                  <label>Resim yükle</label>
                                  <input type="file" name="picture">
                                  <input type="hidden" name="old_picture">
                               </div>
-
-                              
+                         
                               <div class="form-group">
                                  <label>Adres</label>
-                                 <textarea name="address" class="form-control" rows="3" required></textarea>
+                                 <textarea name="address" class="form-control" rows="3" required><?php echo $d['dAddress']?></textarea>
                               </div>
+                              
 
                               <div class="reset-button">
-                                 <a href="add-customer.php" class="btn btn-warning">Sıfırla</a>
-                                 <button type="submit" class="btn btn-success">Kaydet</button>
+
+                              <button type="submit" class="btn btn-success">Kaydet</button>
                               </div>
+                              
                            </form>
+                           <?php } ?>
                         </div>
                      </div>
                   </div>

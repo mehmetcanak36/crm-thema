@@ -1,7 +1,7 @@
 <?php 
-include "function.php";
+include "functionscustomer.php";
 $table="customer";
-$conn=connect();
+//$conn=connect();
 $customerName = $_POST["name"];
 $customerLastName = $_POST["lastname"];
 $customerEmail= $_POST["email"];
