@@ -69,11 +69,8 @@
                   <span class="pe-7s-angle-left-circle"></span>
                </a>
                <!-- searchbar-->
-               <a href="#search"><span class="pe-7s-search"></span></a>
-               <div id="search">
-                 <button type="button" class="close">×</button>
-                 
-             </div>
+              
+               
              <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
                      <!-- Orders -->
@@ -141,34 +138,14 @@
                      </a>
                   </li>
                   <li>
-                     <a href="user.html">
-                     <i class="fa fa-user-circle"></i><span>Kullanıcılar</span>
+                     <a href="manager.php">
+                     <i class="fa fa-user-circle"></i><span>Yöneticiler</span>
                      <span class="pull-right-container">
                      </span>
                      </a>
                   </li>
-                  <li>
-                     <a href="department.html">
-                     <i class="fa fa-tree"></i><span>Departmanlar</span>
-                     <span class="pull-right-container">
-                     </span>
-                     </a>
-                  </li>
-                  <li class="treeview">
-                     <a href="#">
-                     <i class="fa fa-list"></i> <span>Diğer Sayfalar</span>
-                     <span class="pull-right-container">
-                     <i class="fa fa-angle-left pull-right"></i>
-                     </span>
-                     </a>
-                     <ul class="treeview-menu">
-                        <li><a href="login.html">GİRİŞ</a></li>
-                        <li><a href="register.html">KAYDOL</a></li>
-                        <li><a href="profile.html">PROFİL</a></li>
-                        <li><a href="forget_password.html">PAROLLAMI UNUTTUM</a></li>
- 
-                     </ul>
-                  </li>
+                  
+                  
                   
                   
                   

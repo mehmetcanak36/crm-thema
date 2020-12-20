@@ -41,11 +41,7 @@
                                  <input type="number" name="phone" class="form-control" placeholder="emaili girin" required>
                               </div>
                               
-                              <div class="form-group">
-                                 <label>Resim yükle</label>
-                                 <input type="file" name="picture">
-                                 <input type="hidden" name="old_picture">
-                              </div>
+                              
 
                               
                               <div class="form-group">

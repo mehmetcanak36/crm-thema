@@ -52,7 +52,7 @@
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-add">giriş yap</button>
-                                <a class="btn btn-warning" href="register.php">kaydol</a>
+                               
                             </div>
                         </form>
                         </div>

@@ -45,7 +45,7 @@ $data=listTable($table);
                               <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
                                  <thead>
                                     <tr class="info">
-                                       <th>Photo</th>
+                                       
                                        <th>Adı </th>
                                        <th>Soyadı</th>
                                        <th>Email</th>
@@ -59,7 +59,7 @@ $data=listTable($table);
                    <?php foreach( $data as $d) { ?>
                                  <tbody>
                                     <tr>
-                                       <td><img src="assets/dist/img/w1.png" class="img-circle" alt="User Image" width="50" height="50"> </td>
+                                       
                                        <td><?php echo $d['cName'] ?></td>
                                        <td><?php echo $d['cLastName'] ?></td>
                                        <td><?php echo  $d['cEmail'] ?></td>
@@ -68,8 +68,8 @@ $data=listTable($table);
 
                                        
                                        <td>
-                                       <a href="updatecustomer.php?id=<?php echo $d['id']; ?>" > <button type="button" class="btn btn-add btn-sm"  ><i class="fa fa-pencil"></i></button></a>
-                                       <a href="delete_customer.php?id=<?php echo $d['id']; ?>" > <button type="button" class="btn btn-danger btn-sm" ><i class="fa fa-trash-o"></i> </button></a>
+                                       <a href="updatecustomer.php?id=<?php echo $d['id']; ?>" > <button type="button" class="btn btn-add btn-sm"  ><i class="fa fa-pencil"></i> düzenle</button></a>
+                                       <a href="delete_customer.php?id=<?php echo $d['id']; ?>" > <button type="button" class="btn btn-danger btn-sm" ><i class="fa fa-trash-o"></i> sil</button></a>
                                        </td>
                                     </tr>
                        <?php } ?>                             

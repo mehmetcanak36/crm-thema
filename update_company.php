@@ -55,11 +55,7 @@ $data=getData($d1);
                                  <label>Telefon</label>
                                  <input value="<?php echo $d['dPhoneNumber']?>" type="number" name="phone"class="form-control" placeholder="telefonu girin" required>
                               </div>
-                              <div class="form-group">
-                                 <label>Resim yükle</label>
-                                 <input type="file" name="picture">
-                                 <input type="hidden" name="old_picture">
-                              </div>
+                              
                          
                               <div class="form-group">
                                  <label>Adres</label>
