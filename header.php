@@ -52,7 +52,7 @@
       <!-- Site wrapper -->
       <div class="wrapper">
          <header class="main-header">
-            <a href="index.php" class="logo">
+            <a href="mainpage.php" class="logo">
                <!-- Logo -->
                <span class="logo-mini">
                <img src="assets/dist/img/kuvars-mini-logo.png" alt="">
@@ -92,10 +92,10 @@
                         <img src="assets/dist/img/avatar5.png" class="img-circle" width="45" height="45" alt="user"></a>
                         <ul class="dropdown-menu">
                            <li>
-                              <a href="profile.html">
+                              <a href="profile.php">
                               <i class="fa fa-user"></i> Kullanıcı Profili</a>
                            </li>
-                           <li><a href="login.html">
+                           <li><a href="index.php">
                               <i class="fa fa-sign-out"></i> Çıkış Yap</a>
                            </li>
                         </ul>
@@ -112,7 +112,7 @@
                <!-- sidebar menu -->
                <ul class="sidebar-menu">
                   <li class="active">
-                     <a href="index.php"><i class="fa fa-tachometer"></i><span>Dashboard</span>
+                     <a href="mainpage.php"><i class="fa fa-tachometer"></i><span>Dashboard</span>
                      <span class="pull-right-container">
                      </span>
                      </a>
