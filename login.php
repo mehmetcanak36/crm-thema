@@ -23,9 +23,7 @@
     <body>
         <!-- Content Wrapper -->
         <div class="login-wrapper">
-            <div class="back-link">
-                <a href="index.php" class="btn btn-add">Back to Dashboard</a>
-            </div>
+            
             <div class="container-center">
             <div class="login-area">
                 <div class="panel panel-bd panel-custom">
@@ -41,19 +39,19 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <form action="index.php" id="loginForm" novalidate>
+                        <form action="control.php" id="loginForm" novalidate>
                             <div class="form-group">
-                                <label class="control-label" for="username">Kullanıcı Adı</label>
-                                <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
+                                <label class="control-label" for="username">Kullanıcı Adı </label>
+                                <input type="text" placeholder="kullanıcı adını girin " title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
                                 <span class="help-block small"></span>
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Şifre</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
+                                <input type="password" title="şifreyi girin" placeholder="******" required="" value="" name="password" id="password" class="form-control">
                                 <span class="help-block small"></span>
                             </div>
                             <div>
-                                <button class="btn btn-add">giriş yap</button>
+                                <button type="submit" class="btn btn-add">giriş yap</button>
                                 <a class="btn btn-warning" href="register.php">kaydol</a>
                             </div>
                         </form>

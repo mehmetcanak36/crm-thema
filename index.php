@@ -1,1 +1,1 @@
-<?php include "clist.php" ?>
+<?php include "login.php" ?>
