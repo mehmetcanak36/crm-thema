@@ -24,9 +24,9 @@ function listTable($table){
 
     return $data;
 }
-function addTable($dname,$email,$phone,$adres){
+function addTable($dname,$email,$phone,$adres,$image){
     $conn=connect();
-    $query="INSERT INTO department(dName,dAddress,dEmail,dPhoneNumber)VALUE('$dname','$adres','$email','$phone')";
+    $query="INSERT INTO department(dName,dAddress,dEmail,dPhoneNumber,dimagename)VALUE('$dname','$adres','$email','$phone','$image')";
     $data=mysqli_query($conn,$query);
 }
 function deletedepartment($id){

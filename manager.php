@@ -39,7 +39,7 @@ $data=listTable($table);
                               <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
                                  <thead>
                                     <tr class="info">
-                                       
+                                       <th>fotoraf</th>
                                        <th>Adı </th>
                                        <th>Soyadı</th>
                                        <th>Email</th>
@@ -53,7 +53,7 @@ $data=listTable($table);
                    <?php foreach( $data as $d) { ?>
                                  <tbody>
                                     <tr>
-                                       
+                                    <td><img  src="uploadmanager/<?php echo $d['mimagename'] ?>" class="img-circle" alt="User Image" width="50" height="50" ></a></td>
                                        <td><?php echo $d['mName'] ?></td>
                                        <td><?php echo $d['mLastName'] ?></td>
                                        <td><?php echo  $d['mEmail'] ?></td>

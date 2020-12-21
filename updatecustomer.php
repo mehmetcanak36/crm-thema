@@ -1,6 +1,13 @@
 <?php include "functionscustomer.php"?>
 
 <?php 
+$tablem="manager";
+$tabled="department";
+$datam=getdatatable($tablem);
+$datad=getdatatable($tabled);
+?>
+
+<?php 
 $d1=$_GET['id'];
 
 $data=getData($d1);
@@ -39,7 +46,7 @@ $data=getData($d1);
                         <div class="panel-body">
                            
                            <?php foreach($data as $d){ ?>
-                            <form class="col-sm-6" action="update_customer.php?id=<?php echo $d['id'] ?>" method="post">
+                            <form class="col-sm-6" action="update_customer.php?id=<?php echo $d['id'] ?>" enctype="multipart/form-data" method="post">
                               <div class="form-group">
                                  <label>Adı </label>
                                  <input value="<?php echo $d['cName']?>" type="text" name="name" class="form-control" placeholder="adı girin" required>
@@ -56,12 +63,45 @@ $data=getData($d1);
                                  <label>Telefon</label>
                                  <input value="<?php echo $d['cPhone']?>" type="number" name="phone"class="form-control" placeholder="telefonu girin" required>
                               </div>
+                              <div class="form-group">
+                                   <label>profil resmi yükle</label>
+                                   <input type="file" name="fileToUpload" id="fileToUpload" >
+                               </div>
+
                               
                          
                               <div class="form-group">
                                  <label>Adres</label>
                                  <textarea name="address" class="form-control" rows="3" required><?php echo $d['cAddress']?></textarea>
                               </div>
+                     <div>
+                           <label  >yönetici seç </label>
+
+                           <select name="manager" class="form-control form-control-lg">
+                           
+                            <option value="<?php echo $d['mid'] ?>"> <?php echo $d['mName'] ?></option>
+                            
+                            <?php foreach ($datam as $d1){ ?>
+
+                            <option  value="<?php echo $d1['mid']?>"><?php echo $d1['mName']?></option> <?php }?>
+                                      </select>
+
+                             </div>  
+                            <br>
+
+                     <div>
+      
+                        <label for="exampleInput5" class="form-label">firma seç </label>
+                          <select name="department" class="form-control form-control-lg"> 
+                          
+                          <option value="<?php echo $d['did'] ?>"> <?php echo $d['dName'] ?></option>
+                           <?php foreach ($datad as $d2){ ?>
+                               
+                               <option  value="<?php echo $d2['did']?>" ><?php echo $d2['dName']?></option> 
+                           <?php }?>
+                           </select>
+                           </div> 
+                     <br><br>  
                               
 
                               <div class="reset-button">

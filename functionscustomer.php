@@ -19,15 +19,17 @@ function connect(){
 }
 function listTable($table){
     $conn=connect();
-    $query="SELECT * FROM $table";
+    $query="SELECT *FROM customer
+    LEFT JOIN department ON  customer.department_id =  department.did
+    LEFT JOIN manager ON  customer.manager_id = manager.mid";
     $data=mysqli_query($conn,$query);
 
     return $data;
 }
-function addTable($cname,$lastname,$email,$adres,$phone){
+function addTable($cname,$lastname,$email,$adres,$phone,$m,$d,$image){
     $conn=connect();
-    $query="INSERT INTO customer(cName,cLastName,cEmail,cAddress,cPhone)
-    VALUE('$cname','$lastname','$email','$adres','$phone')";
+    $query="INSERT INTO customer(cName,cLastName,cEmail,cAddress,cPhone,manager_id,department_id,cimagename)
+    VALUE('$cname','$lastname','$email','$adres','$phone','$m','$d','$image')";
     $data=mysqli_query($conn,$query);
 }
 function deletecustomer($id){
@@ -37,10 +39,10 @@ function deletecustomer($id){
     header("Location: clist.php");
     return $data; 
 }
-function updatecustomer($id,$customerName,$customerLastName,$dcustomerEmail,$costumerAddress,$customerPhone){
+function updatecustomer($id,$customerName,$customerLastName,$dcustomerEmail,$costumerAddress,$customerPhone,$cmanager,$cdepartment){
     $conn=connect();
     $query="UPDATE customer SET cName='$customerName',cLastName='$customerLastName',
-    cEmail='$dcustomerEmail',cAddress='$costumerAddress',cPhone='$customerPhone'
+    cEmail='$dcustomerEmail',cAddress='$costumerAddress',cPhone='$customerPhone',manager_id='$cmanager',department_id='$cdepartment'
      WHERE id='$id'";
     $data=mysqli_query($conn,$query);
     header("Location: clist.php");
@@ -48,8 +50,13 @@ function updatecustomer($id,$customerName,$customerLastName,$dcustomerEmail,$cos
 
 function getData($id){
     $conn=connect();
-    $query="SELECT * FROM customer WHERE id=$id";
+    $query="SELECT *
+    FROM customer
+    INNER JOIN department ON  customer.department_id =  department.did
+    INNER JOIN manager ON  customer.manager_id = manager.mid
+    WHERE id=$id";
     $data=mysqli_query($conn,$query);
+
     return $data;
 }
 
@@ -74,7 +81,12 @@ function getdatatable($table) {
 
     return $data;
 }
-
-
+function deletedepartment($id){
+    $conn=connect();
+    $query="DELETE FROM department where did = $id";
+    $data = mysqli_query($conn,$query);
+    header("Location: company.php");
+    return $data; 
+}
 
 ?>

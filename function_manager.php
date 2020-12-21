@@ -24,10 +24,10 @@ function listTable($table){
 
     return $data;
 }
-function addTable($cname,$lastname,$email,$adres){
+function addTable($cname,$lastname,$email,$adres,$image){
     $conn=connect();
-    $query="INSERT INTO manager(mName,mLastName,mEmail,mAddress)
-    VALUE('$cname','$lastname','$email','$adres')";
+    $query="INSERT INTO manager(mName,mLastName,mEmail,mAddress,mimagename)
+    VALUE('$cname','$lastname','$email','$adres','$image')";
     $data=mysqli_query($conn,$query);
 }
 function deletemanager($id){

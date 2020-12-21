@@ -19,8 +19,8 @@ $data=listTable($table);
                   <i class="fa fa-suitcase"></i>
                </div>
                <div class="header-title">
-                  <h1>KURUMLAR</h1>
-                  <small>Kurum Listesi</small>
+                  <h1>FİRMALAR</h1>
+                  <small>Firma Listesi</small>
                </div>
             </section>
             <!-- Main content -->
@@ -31,7 +31,7 @@ $data=listTable($table);
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonexport">
                               <a href="#">
-                                 <h4>Kurum bilgileri</h4>
+                                 <h4>Firma bilgileri</h4>
                               </a>
                            </div>
                         </div>
@@ -39,7 +39,7 @@ $data=listTable($table);
                         <!-- Plugin content:powerpoint,txt,pdf,png,word,xl -->
                            <div class="btn-group">
                               <div class="buttonexport" id="buttonlist"> 
-                                 <a class="btn btn-add" href="add_company.php" > <i class="fa fa-plus"></i> Yeni Kurum Ekle
+                                 <a class="btn btn-add" href="add_company.php" > <i class="fa fa-plus"></i> Yeni Firma Ekle
                                  </a>  
                               </div>
                               
@@ -50,8 +50,8 @@ $data=listTable($table);
                               <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
                                  <thead>
                                     <tr class="info">
-                                       
-                                       <th>kurum adı</th>
+                                       <th>fotoraf</th>
+                                       <th>Firma adı</th>
                                        <th>Email</th>
                                        <th>Telefon</th>
                                        <th>Adres</th>
@@ -66,11 +66,12 @@ $data=listTable($table);
                             <?php foreach($data as $d){ ?>
                                  <tbody>
                                     <tr>
-                                       
+                                    <td><img  src="uploadcompany/<?php echo $d['dimagename'] ?>" class="img-circle" alt="User Image" width="50" height="50" ></a></td>
                                        <td><?php echo $d['dName'] ?></td>
                                        <td><?php echo $d['dEmail'] ?></td>
                                        <td><?php echo $d['dPhoneNumber'] ?></td>
                                        <td><?php echo $d['dAddress'] ?></td>
+                                       
                                        
                                        <td>
                                        <a href="update_company.php?did=<?php echo $d['did']; ?>" > <button type="button" class="btn btn-add btn-sm" ><i class="fa fa-pencil"></i> düzenle</button></a>

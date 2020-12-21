@@ -18,7 +18,7 @@ $data=getData($d1);
                   <i class="fa fa-users"></i>
                </div>
                <div class="header-title">
-                  <h1>Kurum Güncelle</h1>
+                  <h1>Firma Güncelle</h1>
                   <p></p>
                   <small></small>
                </div>
@@ -34,7 +34,7 @@ $data=getData($d1);
                         <div class="panel-heading">
                            <div class="btn-group" id="buttonlist"> 
                               <a class="btn btn-add " href="company.php"> 
-                              <i class="fa fa-list"></i>  kurum listesi </a>  
+                              <i class="fa fa-list"></i>  firma listesi </a>  
                            </div>
                         </div>
                         

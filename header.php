@@ -86,7 +86,7 @@
                      <!-- user -->
                      <li class="dropdown dropdown-user">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="assets/dist/img/avatar5.png" class="img-circle" width="45" height="45" alt="user"></a>
+                        <img src="assets/dist/img/avatar5.jpg" class="img-circle" width="45" height="45" alt="user"></a>
                         <ul class="dropdown-menu">
                            <li>
                               <a href="profile.php">
@@ -132,7 +132,7 @@
                   
                   <li>
                      <a href="company.php">
-                     <i class="fa fa-home"></i> <span>Kurumlar</span>
+                     <i class="fa fa-home"></i> <span>Firmalar</span>
                      <span class="pull-right-container">
                      </span>
                      </a>

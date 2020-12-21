@@ -3,9 +3,22 @@
 $table="customer";
 $data=listTable($table);
 
+function getdepartmentname($id){
+   
+   $conn=connect();
+   $query="SELECT *FROM department
+   LEFT JOIN customer ON department.did= customer.department_id"
+   ;
+   $data=mysqli_query($conn,$query);
+   return $data;
+
+}
+
 
 ?>
+
 <?php include "header.php" ?>
+
 
 <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -45,31 +58,45 @@ $data=listTable($table);
                               <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
                                  <thead>
                                     <tr class="info">
-                                       
+                                       <th>fotograf</th>
                                        <th>Adı </th>
                                        <th>Soyadı</th>
                                        <th>Email</th>
                                        <th>Telefon</th>
                                        <th>Address</th>
-                                      
+                                       <th>yönetici</th>
+                                       <th>firma</th>
                                        <th>Action</th>
+                                       <th></th>
                                       
                                     </tr>
                                  </thead>
                    <?php foreach( $data as $d) { ?>
                                  <tbody>
                                     <tr>
-                                       
+                                       <td><img  src="uploadcustomer/<?php echo $d['cimagename'] ?>" class="img-circle" alt="User Image" width="50" height="50" ></a></td>
                                        <td><?php echo $d['cName'] ?></td>
                                        <td><?php echo $d['cLastName'] ?></td>
                                        <td><?php echo  $d['cEmail'] ?></td>
                                        <td><?php echo $d['cPhone']?></td>
                                        <td><?php echo $d['cAddress']?></td>
+                                       <td><?php echo $d['mName']?></td>
+                                       <td><?php echo $d['dName']?> </td>
+                                        
+                                       
+                                       
 
+                                     
                                        
                                        <td>
+                                       <a href="detail_customer.php?id=<?php echo $d['id']; ?>" > <button type="button" class="btn btn-info btn-sm"  ><i class="fa fa-address-card-o"></i> ayrıntı</button></a>
                                        <a href="updatecustomer.php?id=<?php echo $d['id']; ?>" > <button type="button" class="btn btn-add btn-sm"  ><i class="fa fa-pencil"></i> düzenle</button></a>
                                        <a href="delete_customer.php?id=<?php echo $d['id']; ?>" > <button type="button" class="btn btn-danger btn-sm" ><i class="fa fa-trash-o"></i> sil</button></a>
+                                       
+                                       </td>
+                                       <td>
+                                       
+                                       
                                        </td>
                                     </tr>
                        <?php } ?>                             

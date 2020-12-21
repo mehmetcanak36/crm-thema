@@ -1,9 +1,9 @@
-<?php 
-include "functionscustomer.php";
+<?php include "functionscustomer.php"; ?>
+<?php
 
 $customerid=$_GET['did'];
 
-deletecustomer($customerid);
+deletedepartment($customerid);
 
 
 ?>
