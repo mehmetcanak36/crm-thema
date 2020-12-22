@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 21 Ara 2020, 23:28:18
+-- Üretim Zamanı: 22 Ara 2020, 06:52:34
 -- Sunucu sürümü: 5.7.31
 -- PHP Sürümü: 7.4.9
 
@@ -30,24 +30,24 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `customer`;
 CREATE TABLE IF NOT EXISTS `customer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cName` text NOT NULL,
+  `cName` text CHARACTER SET utf8 NOT NULL,
   `cLastName` text NOT NULL,
   `cEmail` text NOT NULL,
-  `cAddress` text NOT NULL,
+  `cAddress` text CHARACTER SET utf8 NOT NULL,
   `cPhone` int(11) DEFAULT NULL,
   `department_id` int(11) DEFAULT NULL,
   `manager_id` int(11) DEFAULT NULL,
   `cimagename` text,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=82 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Tablo döküm verisi `customer`
 --
 
 INSERT INTO `customer` (`id`, `cName`, `cLastName`, `cEmail`, `cAddress`, `cPhone`, `department_id`, `manager_id`, `cimagename`) VALUES
-(56, 'necip', 'uysal', 'nu@numail.com', 'beÅŸiktas istanbul', 539, 17, 11, 'w4.png'),
+(56, 'necip', 'uysal', 'nu@numail.com', 'beşiktas istanbul', 539, 17, 11, 'w4.png'),
 (59, 'mustafa', 'gÃ¼ltekin', 'ma@mail.com', 'adana', 535, 17, 12, 'w2.png'),
 (61, 'burak', 'yÄ±lmaz', 'by@mail.com', 'trabzon', 507, 19, 15, 'w3.png'),
 (62, 'ali', 'metin', 'ali@mail.com', 'antalya', 531, 22, 13, 'w7.png'),
@@ -74,18 +74,17 @@ CREATE TABLE IF NOT EXISTS `department` (
   `dReferenceCustomer` varchar(500) DEFAULT NULL,
   `dimagename` text,
   PRIMARY KEY (`did`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Tablo döküm verisi `department`
 --
 
 INSERT INTO `department` (`did`, `dName`, `dNumber`, `dAddress`, `dPhoneNumber`, `dContent`, `dCountry`, `dEmail`, `dPostCode`, `dCostumerType`, `dReferenceCustomer`, `dimagename`) VALUES
-(21, 'ADIM ROBOT', '42', 'kÃ¼tahya teknokent', '05302239182', NULL, NULL, 'info@adimrobot.com', NULL, NULL, NULL, 'logo5.png'),
+(21, 'ADIM ROBOT', '42', 'kÃ¼tahya teknoken', '05302239182', NULL, NULL, 'info@adimrobot.com', NULL, NULL, NULL, 'logo5.png'),
 (17, 'kuvarssoft', '44', 'DumlupÄ±nar Ãœniversitesi Teknokentti Ã‡alca Mah. EskiÅŸehir Karayolu 5. km. Ofis No : 9/10 Merkez/KÃœTAHYA', '785', NULL, NULL, 'destek@kuvarssoft.com', NULL, NULL, NULL, 'kuvars-mini-logo.png'),
 (19, 'cevizsoft', '43', 'GazcÄ±lar Cad. KÄ±rcaali Mah. Anafartalar Sokak No: 2/1 Osmangazi / BURSA', ' 0549 252 19 00', NULL, NULL, 'info@cevizsoft.com', NULL, NULL, NULL, 'logo8.png'),
-(20, 'AKM Ä°nteraktif', '47', 'KÃ¼tahya DumlupÄ±nar TasarÄ±m Teknokent 1. Kat D:11, 2. OSB, KÃœTAHYA', '0534 228 85 05', NULL, NULL, 'ahmedberaterarslan', NULL, NULL, NULL, 'logo9.png'),
-(22, 'cezeri', '', 'Ã‡alca OSB Mah. 1 Cad. No: 1/14 43100 MERKEZ ', '9863', NULL, NULL, 'cezeriteknoloji@gmail', NULL, NULL, NULL, 'logo6.png');
+(20, 'AKM Ä°nteraktif', '47', 'KÃ¼tahya DumlupÄ±nar TasarÄ±m Teknokent 1. Kat D:11, 2. OSB, KÃœTAHYA', '0534 228 85 05', NULL, NULL, 'ahmedberaterarslan', NULL, NULL, NULL, 'logo9.png');
 
 -- --------------------------------------------------------
 
@@ -98,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -112,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `imagetables` (
   `imagename` text,
   `iCustomerid` text,
   PRIMARY KEY (`iid`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Tablo döküm verisi `imagetables`
@@ -137,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `manager` (
   `mRole` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
   `mimagename` text,
   PRIMARY KEY (`mid`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Tablo döküm verisi `manager`
@@ -163,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `systemmanager` (
   `smUserName` text NOT NULL,
   `smPassword` varchar(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Tablo döküm verisi `systemmanager`
